@@ -2,6 +2,7 @@ App = {
   web3Provider: null,
   contracts: {},
   account: '0x0',
+  hasVoted: false,
 
   init: function() {
     return App.initWeb3();
@@ -22,56 +23,40 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON("Product.json", function(product) {
+    $.getJSON("Election.json", function(election) {
       // Instantiate a new truffle contract from the artifact
-      App.contracts.Product = TruffleContract(product);
+      App.contracts.Election = TruffleContract(election);
       // Connect provider to interact with contract
-      App.contracts.Product.setProvider(App.web3Provider);
-
+      App.contracts.Election.setProvider(App.web3Provider);
       return App.render();
     });
   },
 
   render: function() {
-    var productInstance;
-    var loader = $("#loader");
-    var content = $("#content");
+   
 
-    loader.show();
-    content.hide();
-
-    // Load account data
-    web3.eth.getCoinbase(function(err, account) {
-      if (err === null) {
-        App.account = account;
-        $("#accountAddress").html("Your Account: " + account);
-      }
-    });
 
     // Load contract data
-    App.contracts.Product.deployed().then(function(instance) {
-      productInstance = instance;
-      return productInstance.productsCount();
-    }).then(function(productsCount) {
-      var productsResults = $("#candidatesResults");
-      productsResults.empty();
+    App.contracts.Election.deployed().then(function(instance) {
+      electionInstance = instance;
+      return electionInstance.products(1);
+    }).then(function(x) {
+   
 
-      for (var i = 1; i <= productsCount; i++) {
-        productInstance.candidates(i).then(function(candidate) {
-          var id = candidate[0];
-          var name = candidate[1];
-          
+      alert(x[2]);
+      p=$('#ashwin1');
+      p.html(""+x[2]);
 
-          // Render candidate Result
-          var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td></tr>"
-          productsResults.append(candidateTemplate);
+
+
         });
-      }
-
-      loader.hide();
-      content.show();
-    }).catch(function(error) {
-      console.warn(error);
+      
+      
+  },
+  add: function() {
+   
+    App.contracts.Election.deployed().then(function(instance) {
+      return instance.addDiscount();
     });
   }
 };

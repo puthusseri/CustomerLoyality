@@ -1,5 +1,5 @@
-var Product = artifacts.require("./Product.sol");
+var Election = artifacts.require("./Election.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Product);
+  deployer.deploy(Election);
 };
