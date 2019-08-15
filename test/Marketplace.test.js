@@ -57,6 +57,23 @@ contract('Marketplace', ([deployer, seller, buyer])=> {
        
         
         })
+
+        it("sell products", async() => {
+            //success buyyer makes the purchase
+            result = await marketplace.purchaseProduct(productCount, {from: buyer, value: web3.utils.toWei('1', 'Ether')})
+            //check the logs
+            const event = result.logs[0].args
+            assert.equal(event.id.toNumber(),productCount.toNumber(), 'id is correct')
+            assert.equal(event.name,'iphone', 'name is correct')
+            assert.equal(event.price,'1000000000000000000', 'price is correct')
+            assert.equal(event.owner, buyer, 'owner is correct')
+            assert.equal(event.purchased,true,'purchased is correct')
+       
+        })
+
+
+
+
     })
 
 
