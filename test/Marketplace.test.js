@@ -59,8 +59,15 @@ contract('Marketplace', ([deployer, seller, buyer])=> {
         })
 
         it("sell products", async() => {
+
+            //Store the seller balance at first
+            let oldSellerBalance
+            oldSellerBalance = await web3.eth.getBalance(seller)
+            oldSellerBalance = new web3.utils.BN(oldSellerBalance)
+
             //success buyyer makes the purchase
             result = await marketplace.purchaseProduct(productCount, {from: buyer, value: web3.utils.toWei('1', 'Ether')})
+          
             //check the logs
             const event = result.logs[0].args
             assert.equal(event.id.toNumber(),productCount.toNumber(), 'id is correct')
@@ -69,6 +76,19 @@ contract('Marketplace', ([deployer, seller, buyer])=> {
             assert.equal(event.owner, buyer, 'owner is correct')
             assert.equal(event.purchased,true,'purchased is correct')
        
+            //check if seller receves the correct amount
+            //After the transaction
+            let newSellerBalance
+            newSellerBalance = await web3.eth.getBalance(seller)
+            newSellerBalance = new web3.utils.BN(newSellerBalance)
+
+            let price
+            price = web3.utils.toWei('1', 'Ether')
+            price = new web3.utils.BN(price)
+            console.log(oldSellerBalance,newSellerBalance,price)
+            
+            const expectedBalance = oldSellerBalance.add(price)
+            assert.equal(newSellerBalance.toString(),expectedBalance.toString())
         })
 
 
