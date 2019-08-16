@@ -89,6 +89,10 @@ contract('Marketplace', ([deployer, seller, buyer])=> {
             
             const expectedBalance = oldSellerBalance.add(price)
             assert.equal(newSellerBalance.toString(),expectedBalance.toString())
+        
+            //Failures : Tries to buy a product that doesnot exists
+            await marketplace.purchaseProduct(99, {from: buyer, value: web3.utils.toWei('1', 'Ether')}).should.be.rejected; 
+          
         })
 
 

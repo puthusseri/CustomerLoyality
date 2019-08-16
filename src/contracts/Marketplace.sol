@@ -48,6 +48,15 @@ contract Marketplace {
     Product memory _product = products[_id];
     //fetch the owner
     address payable _seller = _product.owner;
+    //makesure the product id is valid
+    require(_product.id > 0 && _product.id < productCount);
+    //Check there are enough balance in the ether account
+    require(msg.value >= _product.price);
+    //required that product has not purchased early
+    require(!_product.purchased);
+    //require that the buyer is not the seller
+    require(_seller != msg.sender);
+
     //Transfer the ownership
     _product.owner = msg.sender;
 
@@ -62,5 +71,4 @@ contract Marketplace {
     emit ProductPurchased(productCount, _product.name, _product.price, msg.sender, true);
 
   }
-
 }
