@@ -1,0 +1,345 @@
+.ms-rb-isEditMode .emb-cc-dialog-layer {
+    z-index: 0;
+    background-color: transparent !important;
+    top: 0 !important;
+    left: 0 !important;
+    position: static;
+}
+
+body .emb-cc-dialog-layer {
+	z-index: 100;
+	background-color: rgba(255, 255, 255, 1);
+	left: 35% !important;
+	position: absolute;	
+}
+
+body .emb-cc-dialog-layer h2 {
+	font-size: 20px !important;
+	font-family: Daimler-Corpo-AC, "Times New Roman" !important;
+	font-weight: normal !important;
+	font-stretch: condensed !important;
+}
+
+.ms-rb-isEditMode .emb-cc-dialog-title {
+	font-weight: bold;
+	height: 27px;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background: transparent;
+}
+
+.emb-cc-dialog-title {
+	font-weight: bold;
+	height: 27px;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background: rgba(0,0,0,0.5) url(layer/layerInfoHeadLeft.png) no-repeat scroll 0% top;
+}
+
+.ms-rb-isEditMode .emb-cc-dialog-title .close {
+	background: transparent;
+	position: static;
+}
+
+.ms-rb-isEditMode div#ms-wrapper span.ms-rb-desc {
+    position: relative;
+}
+
+.emb-cc-dialog-title .close {
+	background: transparent url(layer/closebutton.png) scroll 0%;
+	position: absolute;
+	top: 3px;
+	right: 11px;
+	height: 21px;
+	width: 19px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.ms-rb-isEditMode .emb-cc-dialog-title .close:hover {
+	background: transparent;
+}
+
+.emb-cc-dialog-title .close:hover {
+	background: transparent url(layer/closebuttonHi.png) scroll 0%;
+}
+.ms-rb-isEditMode .emb-cc-dialog-titleC {
+	background: transparent;
+}
+
+.emb-cc-dialog-titleC {
+	font-weight: bold;
+	color: #FFFFFF;
+	height: 27px;
+	padding: 0;
+	margin: 0 !important;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background: rgba(0,0,0,0.5) url(layer/layerInfoHeadRight.png) no-repeat scroll 95% top;
+}
+
+.emb-cc-dialog-titleC div {
+	padding: 8px 0 0 0;
+}
+
+div.ms-rb-isEditMode div.emb-vin-entry-layer {
+	width: 100%;
+}
+
+div.emb-vin-entry-layer {
+	width: 480px;
+	cursor: default;
+}
+
+div#vin-entry-layer-inner {
+	padding-left: 10px;
+	padding-right: 10px;
+	overflow: hidden;
+}
+
+div#vin-entry-layer-inner .layer-uppercontent {
+	padding-left: 13px;
+	padding-right: 5px;
+}
+
+div#vin-entry-layer-inner .layer-headline, div#vin-compatible-layer-inner .layer-headline,
+	div#vin-incompatible-layer-inner .layer-headline {
+	color: #666666;
+	font-family: "corpoa regular";
+	font-weight: normal;
+	font-size: 22px;
+	text-align: left;
+	margin-top: 20px;
+}
+
+div#vin-entry-layer-inner .layer-sub-headline, div#vin-compatible-layer-inner div.subline{
+	color: #666666;
+	font: 12px Arial;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 20px;
+}
+
+div#vin-incompatible-layer-inner .layer-sub-headline {
+	color: #666666;
+	font: 12px Arial;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+div#vin-incompatible-layer-inner div.subline {
+	color: #666666;
+	font: 12px Arial;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 15px;
+}
+
+div#vin-entry-layer-inner .layer-txt p {
+	color: #666666;
+	font: 12px Arial;
+	font-weight: normal;
+	text-align: left;
+	margin-top: 10px;
+}
+
+div#vin-entry-layer-inner #input-fin {
+	margin-top: 16px;
+	color: #666666;
+	font: 12px Arial;
+	font-weight: normal;
+	text-align: left;
+	width: 258px;
+	border-color: #999999;
+	margin-top: 16px;
+}
+div.emb-cc-dialog-layer p.ms93-bt3 a {
+	background-color:#666666;
+}
+.contentsC div#emb-cc-inner .vin_incompatible_layer .layer-headline,
+.contentsC div#emb-cc-inner .vin_incompatible_layer .layer-sub-headline {
+	margin-right: 60px;	
+}
+
+.contentsC div#emb-cc-inner .vin_incompatible_layer .ms-teaser-typ-19 .ms-text,
+.contentsC div#emb-cc-inner .vin_incompatible_layer .subline,
+.contentsC div#emb-cc-inner .vin_compatible_layer .description,
+.contentsC div#emb-cc-inner .vin_compatible_layer .subline {
+	margin-right: 25px;	
+}
+
+.emb-vin-btn {
+	margin-top: 20px;
+}
+
+div#vin-entry-layer-inner .layer-uppercontent a.btn-link {
+	margin-top: 20px;
+}
+
+div#vin-entry-layer-inner .layer-uppercontent .error-txt {
+	margin-top: 70px;
+	font: 11px Arial;
+	line-height: 13px;
+	color: #9f0002;
+	text-align: left
+}
+
+div#vin-entry-layer-inner .layer-uppercontent div.link-list {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+div#vin-entry-layer-inner .layer-uppercontent ul.ms-linklist-typ-1 li a
+	{
+	font: 11px Arial;
+	color: #003366;
+	text-align: left;
+}
+
+div#vin-entry-layer-inner .layer-foldingtable div.ms-component.ms-component.ms-distance-0r {
+	padding-top: 30px;
+}
+
+div#vin-entry-layer-inner .layer-foldingtable div.ms-tb3 td {
+	background-color: #fff;
+}
+
+div#vin-entry-layer-inner .layer-foldingtable div.ms-tb3 table tr td div.ms-tb3-cell-l
+	{
+	width: 460px;
+}
+
+.ms-rb-isEditMode div#vin-compatible-layer-inner, 
+.ms-rb-isEditMode  div#vin-incompatible-layer-inner {
+	padding-left: 25px;
+	padding-right: 25px;
+	width: inherit;
+}
+
+div#vin-compatible-layer-inner, div#vin-incompatible-layer-inner {
+	padding-left: 23px;
+	padding-right: 10px;
+	overflow: hidden;
+	width: 460px;
+}
+
+div#vin-compatible-layer-inner .ms-distance-lr {
+	margin: 0px;
+}
+
+div#vin-compatible-layer-inner .ms-distance-lr .ms-me2-with-distance.ms-div-with-distance
+	{
+	margin-bottom: 0px !important;
+	margin-top: 20px;
+}
+
+div#vin-compatible-layer-inner .ms-distance-lr .ms-me2-with-distance.ms-div-with-distance>img
+	{
+	width: 448px;
+	height: 180px;
+}
+
+div#vin-compatible-layer-inner div.description {
+	margin-top: 16px;
+}
+
+div#vin-compatible-layer-inner div.regtext.subline {
+	padding-top: 10px;
+}
+
+div#vin-compatible-layer-inner div.btns {
+	margin-top: 16px;
+	padding-bottom: 30px;
+}
+
+div#vin-compatible-layer-inner div.btns div.btn1 a {
+	background-color: #00ADEF;
+	border-color: #02a2e1;
+}
+
+div#vin-compatible-layer-inner div.btns div.btn1 a:hover {
+	background-color: #0088C6;
+	border-color: #02a2e1;
+}
+
+div#vin-compatible-layer-inner div.btns div.btn2 a {
+	margin-left: 8px;
+}
+
+
+.ms-rb-isEditMode div#vin-compatible-layer-inner div.btns div.btn2 a {
+	margin-left: 0px;
+}
+
+div#vin-incompatible-layer-inner {
+	padding-right: 25px;
+}
+
+div#vin-incompatible-layer-inner  li.ms-rb-pageFrame {
+	margin-left: 8px;
+}
+
+div#vin-incompatible-layer-inner  li.ms-rb-pageFrame:first-child {
+	margin-left: 0px;
+}
+
+div#vin-incompatible-layer-inner div.ms-rb-moduleTeaserAuthor {
+	width: 100%
+}
+
+div#vin-incompatible-layer-inner div.ms-rb-moduleTeaserAuthor div.componentBorderInner>div.componentBorder
+	{
+	width: 30%
+}
+
+.initial-cc-layer .emb-vin-entry-layer .ms-linklist-typ-1,
+.initial-cc-layer .emb-vin-entry-layer p#vinError,
+.initial-cc-layer .emb-vin-entry-layer p#notFound,
+.initial-cc-layer .emb-vin-entry-layer p#vinWrong {
+	display: none;
+}
+
+.initial-cc-layer.emb-cc-error-vinerror .emb-vin-entry-layer .ms-linklist-typ-1,
+.initial-cc-layer.emb-cc-error-vinerror .emb-vin-entry-layer p#vinError,
+.initial-cc-layer.emb-cc-error-notfound .emb-vin-entry-layer p#notFound,
+.initial-cc-layer.emb-cc-error-vinwrong .emb-vin-entry-layer p#vinWrong {
+	display: block;
+}
+
+div#vin-incompatible-layer-inner ul {
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+div#vin-incompatible-layer-inner ul {
+	display: table-cell;
+    clear:both;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+div#vin-incompatible-layer-inner ul a {
+    display: table-cell;
+    clear: both;
+    max-width: 138px;
+    padding-left: 8px;
+}
+
+div#vin-incompatible-layer-inner li.ms-rb-pageFrame a span.ms-rb-title {
+	color: #003366;
+	background: url("icon_sprite.gif") no-repeat scroll 0 4px transparent;
+	background-position: 0 -617px;
+	font-size: 11px;
+}
+
+div#vin-incompatible-layer-inner li.ms-rb-pageFrame a:hover span.ms-rb-title
+	{
+	background-position: 0 -336px;
+	color: #00ADEF;
+}
