@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                         %               
+%               This record was created by Vyshak Puthusseri                                              %
+%                       MCA CET 2017-2020 batch                                                           %    
+%                                                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{mainreport}
+\usepackage{hyperref}
+\usepackage{sectsty}
+\chapterfont{\centering}
+\usepackage{makeidx}
+\usepackage{indentfirst}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\bibliographystyle{unsrt}
+
+\begin{document}
+
+\maketitle
+\include{declaration}
+\include{certificate}
+\include{acknowledgement}
+\include{abstract}
+\tableofcontents
+
+\newpage
+\pagenumbering{roman}
+\cleardoublepage
+\phantomsection
+
+\cleardoublepage
+\phantomsection
+
+
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\newpage
+\pagenumbering{arabic}
+ \include{introduction}
+ \include{requirements}
+ \include{conclusion}
+
+
+\end{document}
