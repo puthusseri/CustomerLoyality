@@ -25,7 +25,7 @@ be tamper proof.
 ## System Architecture
 
 
-![SystemArchitecture](https://github.com/nikhilvc1990/AgriChain/blob/master/screenshots/AgriChain.jpg?raw=true "Flow Chart")
+![SystemArchitecture](https://github.com/puthusseri/CustomerLoyality/blob/master/Screenshot/flow.png)
 
 ## About Us
 
