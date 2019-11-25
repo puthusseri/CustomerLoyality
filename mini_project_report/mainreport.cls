@@ -68,7 +68,7 @@
 {\centering     
 
 \Large
-{\rm\bf SOULTION TO CUSTOMER LOYALITY PROBLEM}\\ 
+{\rm\bf SOLUTION TO COUPON FRAUD PROBLEM USING BLOCKCHAIN}\\ 
 
 \vspace{2cm}
 \normalsize {A PROJECT REPORT}\\
@@ -77,8 +77,11 @@
 submitted by \\
 \vspace{.5cm}
 \rm
-{\large \bf {VYSHAK PUTHUSSERI}}\\
-{\normalsize \bf {TVE17MCA054}}\\
+{\bf {ASHWIN MADHU}     \hspace{1.2cm} TVE17MCA012}\\
+{\bf {VARNA KRISHNAN PE} TVE17MCA052}\\
+{\bf {VYSHAK PUTHUSSERI} TVE17MCA054}\\
+
+
 
 \vspace{0.3cm}
 {\bf{to}} \\
@@ -104,7 +107,7 @@ College of Engineering Trivandrum\\
 Trivandrum-695016}\\
 
 \vspace{0.3cm}
-\normalsize {OCTOBER 2019} \\
+\normalsize {NOVEMBER 2019} \\
 }    
 
 \pagebreak
