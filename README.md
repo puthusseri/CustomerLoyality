@@ -12,4 +12,21 @@ and executed in a centralized environment. A professional hacker can easily brea
 We switch the system into a decentralized environment. The discount coupens are stored in a blockchian, so that the data will
 be tamper proof.
 
+## Requirements
 
+- [Node J](https://nodejs.org/en/)
+- [Ganache cli](https://www.trufflesuite.com/docs/ganache/quickstart)
+- [Truffle](https://www.trufflesuite.com/docs/truffle/overview)
+`npm install -g truffle@5.0.5`
+
+- [Metamask](https://metamask.io/)
+
+
+## System Architecture
+
+
+![SystemArchitecture](https://github.com/nikhilvc1990/AgriChain/blob/master/screenshots/AgriChain.jpg?raw=true "Flow Chart")
+
+## About Us
+
+We are a group of researchers based at College of Engineering Trivandrum - Kerala
