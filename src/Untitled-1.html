@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Retailer Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/qrcode.js"></script>
+<link rel="stylesheet" href="../../bootstrap//css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+     folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+<!-- iCheck -->
+<link rel="stylesheet" href="../../plugins/iCheck/flat/blue.css">
+<!-- Morris chart -->
+<link rel="stylesheet" href="../../plugins/morris/morris.css">
+<!-- jvectormap -->
+<link rel="stylesheet" href="../../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+<!-- Date Picker -->
+<link rel="stylesheet" href="../../plugins/datepicker/datepicker3.css">
+<!-- Daterange picker -->
+<link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+<script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+<script type="text/javascript" src="../../js/qrcode.js"></script>
+
+<style>
+/* 
+
+Easy Academy
+
+
+- Courses:  http://www.memrise.com/user/EasyAcademy/courses/teaching/
+
+- EasyAcademyTV: https://www.youtube.com/user/EasyAcademyTV
+
+- Facebook: https://www.facebook.com/easyacademyweb/
+
+- Website: https://easyacademyweb.wordpress.com/
+
+- Github: https://github.com/EasyAcademy/Open-Memrise-Manager
+
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+
+body {
+	background: #3da1d1;
+	color: #fff;
+	overflow: hidden;
+}
+
+.congrats {
+	position: absolute;
+	top: 140px;
+	width: 550px;
+	height: 100px;
+	padding: 20px 10px;
+	text-align: center;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+h1 {
+	transform-origin: 50% 50%;
+	font-size: 50px;
+	font-family: 'Sigmar One', cursive;
+	cursor: pointer;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.blob {
+	height: 50px;
+	width: 50px;
+	color: #ffcc00;
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	z-index: 1;
+	font-size: 30px;
+	display: none;	
+}
+</style>
+</head>
+
+<body id="page-top">
+
+
+    <div class="congrats">
+        <h1>Congratulations!</h1>
+    </div>
+    <img src="https://bit.ly/20qKWK0" style="display:none">
+<script>
+
+    /* 
+
+Easy Academy
+
+
+- Courses:  http://www.memrise.com/user/EasyAcademy/courses/teaching/
+
+- EasyAcademyTV: https://www.youtube.com/user/EasyAcademyTV
+
+- Facebook: https://www.facebook.com/easyacademyweb/
+
+- Website: https://easyacademyweb.wordpress.com/
+
+- Github: https://github.com/EasyAcademy/Open-Memrise-Manager
+
+
+*/
+
+
+$(function() {
+    alert("");
+	var numberOfStars = 200;
+	
+	for (var i = 0; i < numberOfStars; i++) {
+	  $('.congrats').append('<div class="blob fa fa-star ' + i + '"></div>');
+	}	
+
+	animateText();
+	
+	animateBlobs();
+});
+
+$('.congrats').click(function() {
+	reset();
+	
+	animateText();
+	
+	animateBlobs();
+});
+
+function reset() {
+	$.each($('.blob'), function(i) {
+		TweenMax.set($(this), { x: 0, y: 0, opacity: 1 });
+	});
+	
+	TweenMax.set($('h1'), { scale: 1, opacity: 1, rotation: 0 });
+}
+
+function animateText() {
+		TweenMax.from($('h1'), 0.8, {
+		scale: 0.4,
+		opacity: 0,
+		rotation: 15,
+		ease: Back.easeOut.config(4),
+	});
+}
+	
+function animateBlobs() {
+	
+	var xSeed = _.random(350, 380);
+	var ySeed = _.random(120, 170);
+	
+	$.each($('.blob'), function(i) {
+		var $blob = $(this);
+		var speed = _.random(1, 5);
+		var rotation = _.random(5, 100);
+		var scale = _.random(0.8, 1.5);
+		var x = _.random(-xSeed, xSeed);
+		var y = _.random(-ySeed, ySeed);
+
+		TweenMax.to($blob, speed, {
+			x: x,
+			y: y,
+			ease: Power1.easeOut,
+			opacity: 0,
+			rotation: rotation,
+			scale: scale,
+			onStartParams: [$blob],
+			onStart: function($element) {
+				$element.css('display', 'block');
+			},
+			onCompleteParams: [$blob],
+			onComplete: function($element) {
+				$element.css('display', 'none');
+			}
+		});
+	});
+}
+</script>
+
+
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/web3.min.js"></script>
+<script src="../../js/truffle-contract.js"></script>
+<script src="../../js/app.js"></script>
+
+<script type="text/javascript">
+
+  $(document).ready(function () {
+    $('#coupon').hide();
+  });
+
+
+  function code() {
+    alert(""); s
+    var message = "ashwin";
+    if (!message.value) {
+      alert("Input a text");
+      message.focus();
+      return;
+    }
+
+    qrcode.makeCode(message.value);
+  }
+
+
+</script>
