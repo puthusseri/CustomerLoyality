@@ -96,12 +96,19 @@ function addCoupon(string memory x1,uint x2,uint x3)  public onlyRetailer return
        return(x);
     }
 
-// New rebilding contract
+    function addProduct(string memory x1,uint x2)  public onlyRetailer returns (string memory)
+    {
+     /*   uint x=prod[msg.sender].prd.length;
+        prod[msg.sender].prd[x]=x1;
+        prod[msg.sender].price[x]=x2;
+        return("1");
+       */ 
+    }
 
 
-
-
-
-
+    function retailerOrOwner() public view returns (address)
+    {
+        return msg.sender;
+    }
 
 }
