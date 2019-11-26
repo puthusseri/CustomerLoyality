@@ -1,0 +1,35 @@
+
+# CustomerLoyality
+
+[![Build Status](https://travis-ci.org/puthusseri/puthusseri.github.io.svg?branch=master)](https://github.com/puthusseri/CustomerLoyality)
+
+## Introduction
+
+This project was to solve a problem that exist in the current market. The consumer market have many issues. We mainly focus on
+solving the problem with discount coupen manipulations. The discount coupens can be easily manipulated if the system was stored
+and executed in a centralized environment. A professional hacker can easily break though the system and can manipulate the data.
+
+
+## Our solution
+
+We switch the system into a decentralized environment. The discount coupens are stored in a blockchian, so that the data will
+be tamper proof.
+
+## Requirements
+
+- [Node J](https://nodejs.org/en/)
+- [Ganache cli](https://www.trufflesuite.com/docs/ganache/quickstart)
+- [Truffle](https://www.trufflesuite.com/docs/truffle/overview)
+`npm install -g truffle@5.0.5`
+
+- [Metamask](https://metamask.io/)
+
+
+## System Architecture
+
+
+![SystemArchitecture](https://github.com/puthusseri/CustomerLoyality/blob/master/Screenshot/flow.png)
+
+## About Us
+
+We are a group of researchers based at College of Engineering Trivandrum - Kerala
