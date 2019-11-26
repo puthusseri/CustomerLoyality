@@ -37,6 +37,17 @@ contract Coupon {
 
     }
 
+    modifier onlyOwner()
+    {
+        require(owner==msg.sender);
+        _;
+    }
+    
+    modifier onlyRetailer()
+    {
+        require(retailerExists[msg.sender]);
+        _;
+    }
 
 
 
