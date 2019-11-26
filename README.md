@@ -1,7 +1,7 @@
 
 # CustomerLoyality
 
-[![Build Status](https://travis-ci.org/puthusseri/puthusseri.github.io.svg?branch=master)]()
+[![Build Status](https://travis-ci.org/puthusseri/puthusseri.github.io.svg?branch=master)](https://github.com/puthusseri/CustomerLoyality)
 
 ## Introduction
 
