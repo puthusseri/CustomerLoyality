@@ -80,6 +80,21 @@ contract Coupon {
 
     }
 
+function addCoupon(string memory x1,uint x2,uint x3)  public onlyRetailer returns (bytes32)
+    {
+
+           bytes32 x= sha256(abi.encodePacked(x1,x2,x3,now));
+           coupon[x].exist=true;
+           indexCount=indexCount+1;
+           hashCoupon[indexCount]=x;
+           coupon[x].retailerAddr=msg.sender;
+           coupon[x].date=now;
+           coupon[x].product=x1;
+           coupon[x].price=x2;
+           coupon[x].disc=x3;      
+       
+       return(x);
+    }
 
 // New rebilding contract
 
