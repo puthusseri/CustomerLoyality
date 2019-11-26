@@ -48,7 +48,37 @@ contract Coupon {
         require(retailerExists[msg.sender]);
         _;
     }
+   
 
+    function redeem(bytes32 x)
+    {
+        require(coupon[x].exist);
+        coupon[x].exist=false;
+    }
+    
+    function addRetailer(string memory x1,string memory x2) public returns (string memory)
+    {
+       retailer[msg.sender].name=x1;
+       retailerExists[msg.sender]=true;
+       retailer[msg.sender].loc=x2;
+    }
+
+    function getHash() view public returns (bytes32)
+    {
+        return(hashCoupon[indexCount]);
+    }
+
+    function retailerClick() public view returns (string memory)
+    {
+       if(retailerExists[msg.sender]==true)
+       {
+        return("http://localhost:3000/admin1.html");
+        }
+        else{
+            return("http://localhost:3000/register.html");
+        }
+
+    }
 
 
 // New rebilding contract
