@@ -1,8 +1,6 @@
 
 # CustomerLoyality
 
-[![Build Status](https://travis-ci.org/puthusseri/puthusseri.github.io.svg?branch=master)](https://github.com/puthusseri/CustomerLoyality)
-
 ## Introduction
 
 This project was to solve a problem that exist in the current market. The consumer market have many issues. We mainly focus on
